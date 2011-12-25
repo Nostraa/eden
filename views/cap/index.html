@@ -1,0 +1,114 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Sahana Common Alert Protocol Broker"))}}
+	<p>
+	{{=T("The CAP broker gives you the possibility to create and publish incident information and warnings")}}<br />
+	{{=T("Click on the map below to get information on a CAP event.")}}
+	</p>
+	<div id='cap_map' class='cap_map'>
+		<!-- replace following with the real map! -->
+		<a href='{{=URL(f="cap")}}'>
+			<img src='http://www.abload.de/img/mapplaceholderkpahk.jpg' />
+		</a>
+		<div class='cap_map_legend'>
+			<h4>{{=T("Legend")}}</h4>
+				<div class='cap_map_legend_element'>
+					<img src='http://wiki.sahanafoundation.org/lib/exe/fetch.php/foundation:sahana_emblem-medium_jpg.jpg' class='cap_map_legend_element_icon' />
+					<div class="cap_map_legend_element_description">
+						Placeholder
+					</div>
+				</div>
+				<div class='cap_map_legend_element'>
+					<img src='http://wiki.sahanafoundation.org/lib/exe/fetch.php/foundation:sahana_emblem-medium_jpg.jpg' class='cap_map_legend_element_icon' />
+					<div class="cap_map_legend_element_description">
+						Placeholder
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class='cap_alerts'>
+		<div class='dataTable_table'>
+		<table class='dataTable display'>
+			<thead>
+				<tr>
+					<th>{{=T("Functions")}}</th>
+					<th>{{=T("Priority")}}</th>
+					<th>{{=T("Effective Date")}}</th>
+					<th>{{=T("Expire Date")}}</th>
+					<th>{{=T("Sender Name")}}</th>
+					<th>{{=T("Authored By")}}</th>
+					<th>{{=T("Category")}}</th>
+					<th>{{=T("Event")}}</th>
+					<th>{{=T("Headline")}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a class="action-btn" href="{{=URL(f="add", args="0")}}">{{=T("Edit")}}</a>
+						<a class="action-btn" href="{{=URL(f="issue", args="0")}}">{{=T("Issue")}}</a>
+						<a class="action-btn" href="{{=URL(f="delete", args="0")}}">{{=T("Delete")}}</a>
+					</td>
+					<td class="cap_alerts_urgent">
+						Urgent
+					</td>
+					<td>
+						2011-12-24
+					</td>
+					<td>
+						2011-12-24
+					</td>
+					<td>
+						bla
+					</td>
+					<td>
+						blub
+					</td>
+					<td>
+						geo, met, health
+					</td>
+					<td>
+						Flood
+					</td>
+					<td>
+						Critical flooding at location xyz, be careful!
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>
+						<a class="action-btn" href="{{=URL(f="add", args="0")}}">{{=T("Edit")}}</a>
+						<a class="action-btn" href="{{=URL(f="issue", args="0")}}">{{=T("Issue")}}</a>
+						<a class="action-btn" href="{{=URL(f="delete", args="0")}}">{{=T("Delete")}}</a>
+					</td>
+					<td class="cap_alerts_low">
+						Low
+					</td>
+					<td>
+						2011-12-24
+					</td>
+					<td>
+						2011-12-24
+					</td>
+					<td>
+						bla
+					</td>
+					<td>
+						blub
+					</td>
+					<td>
+						geo, met, health
+					</td>					
+					<td>
+						Flood
+					</td>
+					<td>
+						Critical flooding at location xyz, be careful!
+					</td>					
+				</tr>
+								
+			</tbody>
+		</table>
+		</div>
+	</div>
+</div>

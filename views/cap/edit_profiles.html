@@ -1,0 +1,62 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Edit CAP default values and profiles"))}}
+	<div class='form-container cap_edit_div'>
+		<form class="advanced-form" enctype="multipart/form-data" action="{{=URL()}}" method="post">
+		{{=H3(T("Default values"))}}
+		<table>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline">Location settings</td></tr>
+			<tr>
+				<td>Languages</td>
+				<td><input class="cap_add_str" name="language" value="English, Tamil, Sinhala" /></td>
+			</tr>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline">Identifier</td></tr>
+			<tr>
+				<td>prefix</td>
+				<td><input class="cap_add_str" value="2.8481.15.18" name="prefix" /></td>
+				<td style="padding-left: 20px">suffix</td>
+				<td><input class="cap_add_str" value="3.781.72.57"  name="suffix" /></td>			
+			</tr>
+		</table>
+		<input type=submit value="{{=T('Submit')}}" />
+
+		{{=H3(T("Templates"))}}
+		<div class='dataTable_table'>
+		<table class='dataTable display'>
+			<thead>
+				<tr>
+					<th>{{=T("Functions")}}</th>
+					<th>{{=T("Template Name")}}</th>
+					<th>{{=T("Author")}}</th>
+					<th>{{=T("Category")}}</th>
+					<th>{{=T("Event")}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width:100px">
+						<a class="action-btn" href="{{=URL(f="add_profiles", args="0")}}">{{=T("Edit")}}</a>
+						<a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Delete")}}</a>
+					</td>
+					<td>
+						Template XYZ
+					</td>
+					<td>
+						MyName
+					</td>
+					<td>
+						2011-12-24
+					</td>
+					<td>
+						bla
+					</td>
+				</tr>
+								
+			</tbody>
+		</table>
+		<p class="cap_edit_profiles_p">
+			<a class="action-btn" href="{{=URL(f="add_profiles")}}">{{=T("Add new template")}}</a>
+		</p>		
+		</div>
+		</form>
+	</div>

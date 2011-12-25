@@ -1,0 +1,83 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Create/edit CAP message area"))}}
+	<div class='form-container'>
+		<form class="advanced-form" enctype="multipart/form-data" action="{{=URL()}}" method="post" style="height: 500px">
+			<div class='cap_add_dialog_left'>
+				<table>
+					<tbody>
+						<tr>
+							<td class="w2p_fl">
+								{{=T("Area description")}}
+							</td>
+							<td>
+								<input class="cap_add_str" name="area_desc" value="MSG012-50" />
+							</td>
+						</tr>
+						<tr>
+							<td class="w2p_fl">
+							{{=T("Location category")}}
+							</td>
+							<td>
+								<select name="loc_cat" class="cap_add_sel" size="1">
+					      			<option>Area A</option>
+					      			<option>Area B</option>
+					 			</select>
+					 		</td>
+					 	</tr>		
+						<tr>
+							<td class="w2p_fl">
+							{{=T("Location type:")}}
+							</td>
+							<td>
+								<select name="loc_type" class="cap_add_sel" size="1">
+						      		<option>District A</option>
+						      		<option>District B</option>
+						 		</select>
+					 		</td>
+					 	</tr>
+					 	
+					 	<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Polygon:")}}</td></tr>
+					 	<tr>
+					 		<td>X</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td>Y</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td></td><td style="text-align: right"><a class="action-btn" href="{{=URL(f="placeholder", args="0")}}">{{=T("Add")}}</a></td>
+					 	</tr>
+					 	
+					 	<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Circle:")}}</td></tr>
+					 	<tr>
+					 		<td>X</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td>Y</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td>{{=T("Radius")}}</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td></td><td style="text-align: right"><a class="action-btn" href="{{=URL(f="placeholder", args="0")}}">{{=T("Add")}}</a></td>
+					 	</tr>
+					 	
+					 	<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Geocode:")}}</td></tr>
+					 	<tr>
+					 		<td>{{=T("Value name:")}}</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td>{{=T("Value:")}}</td><td><input class="cap_add_str" name="" value="" /></td>
+					 	</tr>
+					 	<tr>
+					 		<td></td><td style="text-align: right"><a class="action-btn" href="{{=URL(f="placeholder", args="0")}}">{{=T("Add")}}</a></td>
+					 	</tr>
+				 	</tbody>
+				</table>
+			</div>
+			<div class='cap_add_dialog_right'>
+				<img src="http://www.abload.de/img/cap-mapfl3y7.jpg" />
+				<br />
+				<input type=submit value="{{=T('Submit')}}" />
+			</div>
+		</form>

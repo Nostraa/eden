@@ -948,7 +948,21 @@ s3_menu_dict = {
             ]],
         ],
     },
-
+    # CAP / CAP Broker
+    # -------------------------------------------------------------------------
+    "cap": {
+            "menu" : [
+                      [T("CAP broker"), False, aURL(f="index"), [
+                        [T("New alert"),
+                         False, aURL(f="add")],
+                        [T("Edit profiles"),
+                         False, aURL(f="edit_profiles")],
+                        [T("Add template"),
+                         False, aURL(f="add_profiles")]
+            ]],
+        ],
+    },
+    
     # MSG / Messaging Controller
     # -------------------------------------------------------------------------
     "msg": {

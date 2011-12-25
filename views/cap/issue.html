@@ -1,0 +1,50 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Create/edit CAP message area"))}}
+	<div class='form-container'>
+		<form class="advanced-form" enctype="multipart/form-data" action="{{=URL()}}" method="post" style="height: 730px">
+			<div>
+				<div class='cap_add_dialog_left'>
+					{{=H3(T("Recipients"))}}
+					<textarea class="cap_add_str" name="recipients" rows="4"></textarea>
+					<br />
+					CONTACTS GO HERE
+					<br /><br />
+					
+				{{=H3(T("Delivery methods"))}}
+				<table>
+					<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Short Text")}}</td><td></td></td><td class="cap_edit_headline">{{=T("Long Text")}}</td></tr>
+					<tr>
+						<td>{{=T("SMS")}}</td><td><input type="checkbox" name="sms" /></td><td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_long" /></td>
+					</tr>
+					<tr>
+						<td>{{=T("HF")}}</td><td><input type="checkbox" name="hf" /></td><td>{{=T("Web")}}</td><td><input type="checkbox" name="web" /></td>
+					</tr>
+					<tr>
+						<td>{{=T("RDF")}}</td><td><input type="checkbox" name="rdf" /></td><td class="cap_edit_headline">{{=T("Voice Text")}}</td>
+					</tr>
+					<tr>
+						<td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_short" /></td><td>{{=T("VoiceXML")}}</td><td><input type="checkbox" name="voicexml" /></td>
+					</tr>
+					<tr>
+						<td>{{=T("Tweet")}}</td><td><input type="checkbox" name="tweet" /></td><td>{{=T("IVR")}}</td><td><input type="checkbox" name="ivr" /></td>
+					</tr>												
+				</table>
+				</div>
+				<div class='cap_add_dialog_right'>
+					<img src="http://www.abload.de/img/cap-mapfl3y7.jpg" />
+					
+				</div>
+				<div style="clear:both">
+				{{=H3(T("Preview messages"))}}
+				{{=H4(T("Short text"))}}
+				<textarea rows="4" class="cap_textarea_full"></textarea>
+				{{=H4(T("Long text"))}}
+				<textarea rows="4" class="cap_textarea_full"></textarea>
+				{{=H4(T("Voice"))}}
+				<textarea rows="4" class="cap_textarea_full"></textarea><br />							
+				<input type="submit" value="{{=T('Deliver')}}" />
+				</div>
+			</div>
+		</form>
+	</div>	

@@ -1,0 +1,133 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Add a new CAP message template"))}}
+
+	<div class='form-container cap_edit_div'>
+		<form class="advanced-form" enctype="multipart/form-data" action="{{=URL()}}" method="post">
+		{{=H3(T("Message information"))}}
+		<table>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline"></td></tr>
+			<tr>
+				<td>{{=T("Template name")}}</td>
+				<td><input class="cap_add_str" value="CoolTemplate"  name="template_name" /></td>
+				<td style="padding-left: 20px">{{=T("Another attribute")}}</td>
+				<td><input class="cap_add_str" value="aufsbuafu"  name="another_attr" /></td>	
+			</tr>
+			<tr>
+				<td>{{=T("Author")}}</td>
+				<td><input class="cap_add_str" value="MeAgain" name="template_author" /></td>
+				<td style="padding-left: 20px">One more attribute</td>
+				<td><input class="cap_add_str" value="afafasf"  name="attr2" /></td>			
+			</tr>
+			<tr><td colspan="4">
+				{{=H3(T("Alert"))}}
+			</td><tr>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline"></td></tr>
+			<tr>
+				<td>{{=T("Status")}}</td>
+				<td>
+					<select name="status" class="cap_add_sel" size="1">
+			      		<option>Actual</option>
+			      		<option>Exercise</option>
+			      		<option>System</option>
+			      		<option>System</option>
+			      		<option>Test</option>
+			      		<option>Draft</option>
+		 			</select>
+	 			</td>
+				<td style="padding-left: 20px">{{=T("Source")}}</td>
+				<td><input class="cap_add_str" value="3.781.72.57"  name="Source" /></td>	
+			</tr>
+			<tr>
+				<td>{{=T("Scope")}}</td>
+				<td>
+					<select name="scope" class="cap_add_sel" size="1">
+			      		<option>Public</option>
+			      		<option>Restricted</option>
+			      		<option>Private</option>
+		 			</select>
+				</td>
+				<td style="padding-left: 20px">{{=T("Restriction [Restricted]")}}</td>
+				<td><input class="cap_add_str" value="3.781.72.57"  name="attr2" /></td>			
+			</tr>
+			<tr><td colspan="4">
+				{{=H4(T("Optional"))}}				
+			</td></tr>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline"></td></tr>
+			<tr>
+				<td>{{=T("Code")}}</td>
+				<td><input class="cap_add_str" value="myTemplate"  name="code" /></td>
+				<td style="padding-left: 20px">{{=T("References")}}</td>
+				<td><input class="cap_add_str" value="Bla"  name="references" /></td>	
+			</tr>
+			<tr>
+				<td>{{=T("Incidents")}}</td>
+				<td><input class="cap_add_str" value="An incident" name="incidents" /></td>
+				<td style="padding-left: 20px">One more attribute</td>
+				<td><input class="cap_add_str" value="3.781.72.57"  name="attr4" /></td>			
+			</tr>
+			<tr><td colspan="4">
+				{{=H3(T("Default Delivery Methods"))}}
+			</td><tr>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Short Text")}}</td><td></td></td><td class="cap_edit_headline">{{=T("Long Text")}}</td></tr>
+			<tr>
+				<td>{{=T("SMS")}}</td><td><input type="checkbox" name="sms" /></td><td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_long" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("HF")}}</td><td><input type="checkbox" name="hf" /></td><td>{{=T("Web")}}</td><td><input type="checkbox" name="web" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("RDF")}}</td><td><input type="checkbox" name="rdf" /></td><td class="cap_edit_headline">{{=T("Voice Text")}}</td>
+			</tr>
+			<tr>
+				<td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_short" /></td><td>{{=T("VoiceXML")}}</td><td><input type="checkbox" name="voicexml" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("Tweet")}}</td><td><input type="checkbox" name="tweet" /></td><td>{{=T("IVR")}}</td><td><input type="checkbox" name="ivr" /></td>
+			</tr>												
+		</table>		
+		<p>
+			<input type=submit value="{{=T('Submit')}}" />
+		</p>	
+
+		{{=H3(T("Languages"))}}
+		<div class='dataTable_table'>
+			<table class='dataTable display cap_edit_template_lang'>
+				<thead>
+					<tr>
+						<th>{{=T("Functions")}}</th>
+						<th>{{=T("Language")}}</th>
+						<th>{{=T("Author")}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width:100px">
+							<a class="action-btn" href="{{=URL(f="edit_lang_template", args="0")}}">{{=T("Edit")}}</a>
+							<a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Delete")}}</a>
+						</td>
+						<td>
+							English
+						</td>
+						<td>
+							MyName
+						</td>
+					</tr>
+					<tr>
+						<td style="width:100px">
+							<a class="action-btn" href="{{=URL(f="edit_lang_template", args="0")}}">{{=T("Edit")}}</a>
+							<a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Delete")}}</a>
+						</td>
+						<td>
+							Tamil
+						</td>
+						<td>
+							AnotherName
+						</td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+		</form>
+	</div>
+		

@@ -58,6 +58,88 @@ li {
 }
 */
 
+
+/* CAP broker */ 
+.cap_map_legend_element {
+	width: 75px;
+	float: left;
+	text-align: center;
+	padding-right: 7px;
+}
+
+.cap_map_legend_element_icon {
+	width: 64px;
+	height: 64px;
+	padding-bottom: 4px;
+}
+
+.cap_add_str, .cap_add_sel {
+	width: 260px;
+	margin-left: 20px !important;
+}
+
+.cap_add_dialog_left, .cap_add_dialog_right {
+	float:left;
+	width=50%;
+	margin-right:20px;
+}
+.cap_map, .cap_alerts {
+	float:left;
+}
+
+.cap_alerts {
+	margin-top: 40px;
+	width: 90%;
+}
+
+td.cap_alerts_urgent {
+	color: white; !important;
+	background-color: red;
+}
+
+td.cap_alerts_medium {
+	color: white; !important;
+	background-color: orange;	
+}
+
+td.cap_alerts_high {
+	color: white; !important;
+	background-color: purple;	
+}
+
+td.cap_alerts_low {
+	color: white; !important;
+	background-color: cyan;	
+}
+
+td.cap_edit_headline {
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+div.cap_edit_div {
+}
+
+.cap_edit_profiles_p {
+	padding-top: 15px;
+}
+
+.cap_edit_template_lang {
+	width: 60% !important
+}
+
+div.cap_edit_alert {
+	margin-top: 340px;
+}
+
+div.cap_msg_info_lower {
+	margin-top: 20px;
+}
+
+.cap_textarea_full {
+	width: 90%;
+}
+
 /* Over-ride Ext */
 ol, ul {
     list-style: disc inside none;

@@ -1,0 +1,83 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Edit a language template"))}}
+	
+	<div class='form-container cap_edit_div'>
+		<form class="advanced-form" enctype="multipart/form-data" action="{{=URL()}}" method="post">
+		{{=H3(T("Info"))}}
+		<table>
+			<tr>
+				<td>{{=T("Language")}}</td>
+				<td>	
+					<select name="language" class="cap_add_sel" size="1">
+			      		<option>English</option>
+			      		<option>Tamil</option>
+		 			</select>
+		 		</td>
+			</tr>
+				<td>{{=T("Category")}}</td>
+				<td><input class="cap_add_str" value="Geo, Health" name="category" /></td>		
+			</tr>
+			</tr>
+				<td>{{=T("Event")}}</td>
+				<td><input class="cap_add_str" value="[Flooding]" name="event" /></td>		
+			</tr>
+			<tr><td colspan="2">
+				{{=H4(T("Optional"))}}				
+			</td></tr>
+			<tr>	
+				<td>{{=T("Headline")}}</td>
+				<td><input class="cap_add_str" value="[HAZARD] in [LOCATION]" name="category" /></td>
+			</tr>
+			<tr>	
+				<td>{{=T("Description")}}</td>
+				<td><textarea class="cap_add_str" cols="4" name="description">xyz</textarea></td>
+			</tr>
+			<tr>	
+				<td>{{=T("Audience")}}</td>
+				<td><input class="cap_add_str" value="" name="audience" /></td>	
+			</tr>
+			<tr>	
+				<td>{{=T("Instrcution")}}</td>
+				<td><textarea class="cap_add_str" cols="4" name="instruction">xyz</textarea></td>
+			</tr>
+			<tr>	
+				<td>{{=T("Web")}}</td>
+				<td><input class="cap_add_str" value="http://google.com" name="web" /></td>
+			</tr>
+			<tr>	
+				<td>{{=T("Contact")}}</td>
+				<td><input class="cap_add_str" value="+49123456" name="contact" /></td>
+			</tr>
+		</table>
+		<input type=submit value="{{=T('Submit')}}" />
+
+		{{=H3(T("Rescource"))}}
+		<div class='dataTable_table'>
+		<table class='dataTable display'>
+			<thead>
+				<tr>
+					<th>{{=T("Functions")}}</th>
+					<th>{{=T("Descriptions")}}</th>
+					<th>{{=T("URL")}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width:100px">
+						<a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Edit")}}</a>
+						<a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Delete")}}</a>
+					</td>
+					<td>
+						Inspection Report
+					</td>
+					<td>
+						http://www.google.com
+					</td>
+				</tr>
+								
+			</tbody>
+		</table>	
+		</div>
+		</form>
+	</div>
