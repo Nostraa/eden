@@ -3,9 +3,6 @@
 """
     CAP-Broker
 """
-# @ToDo Search shelters by type, services, location, available space
-# @ToDo Tie in assessments from RAT and requests from RMS.
-# @ToDo Associate persons with shelters (via presence loc == shelter loc?)
 
 module = request.controller
 resourcename = request.function
@@ -14,7 +11,7 @@ if module not in deployment_settings.modules:
     raise HTTP(404, body="Module disabled: %s" % module)
 
 # Load Models
-#s3mgr.load("cr_shelter")
+
 
 # Options Menu (available in all Functions' Views)
 s3_menu(module)
