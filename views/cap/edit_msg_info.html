@@ -50,12 +50,173 @@
 					<td><input class="cap_add_str" value="+49123456" name="contact" /></td>
 				</tr>
 			</table>
+			{{=H4(T("Message tags"))}}
+			<div class='cap_add_dialog_left'>
+				<table><tbody>
+
+				<tr>
+					<td >
+						{{=T("Message identifier:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="ident" value="MSG012-50" />
+				</td></tr>
+				<tr>
+					<td >
+					{{=T("CAP category:")}}
+					</td>
+					<td>
+					<select name="category" class="cap_add_sel" size="1">
+			      		<option>Geophysical</option>
+			      		<option>Meteorological</option>
+			      		<option>Safety Warning</option>
+			      		<option>Security</option>
+			      		<option>Rescue</option>
+			      		<option>Fire</option>
+			      		<option>Health</option>
+			      		<option>Environment</option>
+			      		<option>Transport</option>
+			      		<option>Infrastructure</option>
+			      		<option>CBRNE</option>
+			      		<option>Other</option>
+			 		</select>
+			 	</td></tr>
+			 	
+			 	<tr>
+					<td >
+						{{=T("Natural language identifier:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="language" />
+				</td></tr>
+				<tr>
+					<td >
+						{{=T("Event which this refers to:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="event" />
+				</td></tr>
+				
+				<tr>
+					<td >
+					{{=T("Event Response:")}}
+					</td>
+					<td>
+					<select name="responseType" class="cap_add_sel" size="1">
+			      		<option>Shelter</option>
+			      		<option>Evacuate</option>
+			      		<option>Prepare</option>
+			      		<option>Execute</option>
+			      		<option>Avoid</option>
+			      		<option>Monitor</option>
+			      		<option>Assess</option>
+			      		<option>AllClear</option>
+			      		<option>None</option>
+			 		</select>
+			 	</td></tr> 	
+			 	
+				<tr>
+					<td >
+					{{=T("Urgency:")}}
+					</td>
+					<td>
+					<select name="urgency" class="cap_add_sel" size="1">
+			      		<option>Immediate</option>
+			      		<option>Expected</option>
+			      		<option>Future</option>
+			      		<option>Past</option>
+			      		<option>Unknown</option>
+			 		</select>
+			 	</td></tr>
+			 	
+			 	<tr>
+					<td >
+					{{=T("Severity:")}}
+					</td>
+					<td>
+					<select name="severity" class="cap_add_sel" size="1">
+			      		<option>Extreme</option>
+			      		<option>Severe</option>
+			      		<option>Moderate</option>
+			      		<option>Minor</option>
+			      		<option>Unknown</option>
+			 		</select>
+			 	</td></tr>
+			 	
+				<tr>
+					<td >
+					{{=T("Certainty:")}}
+					</td>
+					<td>
+					<select name="certainty" class="cap_add_sel" size="1">
+			      		<option>Observed</option>
+			      		<option>Likely</option>
+			      		<option>Possible</option>
+			      		<option>Unlikely</option>
+			      		<option>Unknown</option>
+			 		</select>
+			 	</td></tr> 
+				
+				<tr>
+					<td >
+					{{=T("Audience:")}}
+					</td>
+					<td>
+					<select name="certainty" class="cap_add_sel" size="1">
+			      		<option>Audience goes here</option>
+			 		</select>
+			 	</td></tr>
+			 		 	
+				</tbody></table>
+			</div>
+			<div class='cap_add_dialog_right'>
+				<table><tbody>
+			 	<tr>
+					<td >
+						{{=T("Effective time of information:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="effective" value="NeedDateTimePicker here" />
+				</td></tr>
+			 	
+			 	<tr>
+					<td >
+						{{=T("Expected starttime of event (onset):")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="onset" value="NeedDateTimePicker here" />
+				</td></tr>
+				
+			 	<tr>
+					<td >
+						{{=T("Expires:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="expires" value="NeedDateTimePicker here" />
+				</td></tr> 						
+				
+				<tr>
+					<td >
+						{{=T("References")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="references" value="" />
+				</td></tr>
+				<tr>
+					<td >
+						{{=T("Incidents:")}}
+					</td>
+					<td>
+						<input class="cap_add_str" name="incidents" value="" />
+				</td></tr>		
+				</tbody></table>
+			
 			<input type=submit value="{{=T('Submit')}}" />
-	
-			{{=H3(T("Rescource"))}}
+			</div>
 			<div class='dataTable_table'>
 				<table class='dataTable display'>
 					<thead>
+						<tr><td colspan="4">{{=H3(T("Rescource"))}}</td>
 						<tr>
 							<th>{{=T("Functions")}}</th>
 							<th>{{=T("Descriptions")}}</th>
@@ -79,6 +240,7 @@
 					</tbody>
 				</table>	
 			</div>
+
 			<div class='dataTable_table cap_msg_info_lower'>
 				{{=H3(T("Area"))}}
 			<table class='dataTable display'>

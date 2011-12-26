@@ -129,11 +129,13 @@ div.cap_edit_div {
 }
 
 div.cap_edit_alert {
-	margin-top: 340px;
+	margin-top: 300px;
 }
 
 div.cap_msg_info_lower {
 	margin-top: 20px;
+	clear: both;
+	float: none;
 }
 
 .cap_textarea_full {

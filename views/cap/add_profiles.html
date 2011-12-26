@@ -20,6 +20,26 @@
 				<td><input class="cap_add_str" value="afafasf"  name="attr2" /></td>			
 			</tr>
 			<tr><td colspan="4">
+				{{=H3(T("Default Delivery Methods"))}}
+			</td><tr>
+			<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Short Text")}}</td><td></td></td><td class="cap_edit_headline">{{=T("Long Text")}}</td></tr>
+			<tr>
+				<td>{{=T("SMS")}}</td><td><input type="checkbox" name="sms" /></td><td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_long" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("HF")}}</td><td><input type="checkbox" name="hf" /></td><td>{{=T("Web")}}</td><td><input type="checkbox" name="web" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("RDF")}}</td><td><input type="checkbox" name="rdf" /></td><td class="cap_edit_headline">{{=T("Voice Text")}}</td>
+			</tr>
+			<tr>
+				<td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_short" /></td><td>{{=T("VoiceXML")}}</td><td><input type="checkbox" name="voicexml" /></td>
+			</tr>
+			<tr>
+				<td>{{=T("Tweet")}}</td><td><input type="checkbox" name="tweet" /></td><td>{{=T("IVR")}}</td><td><input type="checkbox" name="ivr" /></td>
+			</tr>
+			<tr><td><a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Create XSL")}}</a></td></tr>		
+			<tr><td colspan="4">
 				{{=H3(T("Alert"))}}
 			</td><tr>
 			<tr class="cap_edit_headline_row"><td class="cap_edit_headline"></td></tr>
@@ -64,33 +84,13 @@
 				<td>{{=T("Incidents")}}</td>
 				<td><input class="cap_add_str" value="An incident" name="incidents" /></td>
 				<td style="padding-left: 20px">One more attribute</td>
-				<td><input class="cap_add_str" value="3.781.72.57"  name="attr4" /></td>			
+				<td><input class="cap_add_str" value="3.781.72.57"  name="attr4" /></td>	
 			</tr>
-			<tr><td colspan="4">
-				{{=H3(T("Default Delivery Methods"))}}
-			</td><tr>
-			<tr class="cap_edit_headline_row"><td class="cap_edit_headline">{{=T("Short Text")}}</td><td></td></td><td class="cap_edit_headline">{{=T("Long Text")}}</td></tr>
-			<tr>
-				<td>{{=T("SMS")}}</td><td><input type="checkbox" name="sms" /></td><td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_long" /></td>
-			</tr>
-			<tr>
-				<td>{{=T("HF")}}</td><td><input type="checkbox" name="hf" /></td><td>{{=T("Web")}}</td><td><input type="checkbox" name="web" /></td>
-			</tr>
-			<tr>
-				<td>{{=T("RDF")}}</td><td><input type="checkbox" name="rdf" /></td><td class="cap_edit_headline">{{=T("Voice Text")}}</td>
-			</tr>
-			<tr>
-				<td>{{=T("E-Mail")}}</td><td><input type="checkbox" name="email_short" /></td><td>{{=T("VoiceXML")}}</td><td><input type="checkbox" name="voicexml" /></td>
-			</tr>
-			<tr>
-				<td>{{=T("Tweet")}}</td><td><input type="checkbox" name="tweet" /></td><td>{{=T("IVR")}}</td><td><input type="checkbox" name="ivr" /></td>
-			</tr>												
-		</table>		
-		<p>
-			<input type=submit value="{{=T('Submit')}}" />
-		</p>	
+			<tr><td colspan="4"><center><input type=submit value="{{=T('Submit')}}" /></center></tr>
+			<tr><td colspan="4">{{=H3(T("Info"))}}</td></tr>								
+		</table>			
 
-		{{=H3(T("Languages"))}}
+		
 		<div class='dataTable_table'>
 			<table class='dataTable display cap_edit_template_lang'>
 				<thead>
@@ -127,6 +127,8 @@
 					</tr>				
 				</tbody>
 			</table>
+			<br />
+			<p><a class="action-btn" href="{{=URL(f="", args="0")}}">{{=T("Add Info segment")}}</a></p>
 		</div>
 		</form>
 	</div>
