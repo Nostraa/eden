@@ -937,6 +937,45 @@ div#map {
     background-image: url(../../img/help_on.gif);
 }
 
+
+/* XSL Tool */
+#xsltool_editarea {
+	margin: 5px;
+}
+
+.xsltool_editarea_input_l {
+	float: left;
+	width: 80%;
+}
+
+.xsltool_editarea_input_r {
+	float: left;
+	width: 20%;
+	padding-top: 32px;
+}
+
+#xsltool_txt {
+	width: 100%;
+}
+
+#xsltool_actionarea {
+	clear: both;
+	width: 100%;
+	padding-top: 20px;
+}
+
+#xsltool_outtype {
+	text-align: right;
+	float: right;
+	margin-right: 6px;
+	padding-top: 10px; 
+}
+
+.xsltool_error {
+	color: red !important;
+}
+
+
 /* Form Popup */
 div#popup {
     background: #fff;

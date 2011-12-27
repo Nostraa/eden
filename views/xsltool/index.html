@@ -1,0 +1,186 @@
+{{extend "layout.html"}}
+<div id='home'>
+	{{=H2(T("Tool for XSL creation and testing"))}}
+	<p>
+		{{=T("Sahana Eden's built in XSL tool allows you to create XSL files.")}}<br />
+	</p>
+	{{=H3(T("Step 1: Upload XSD and XML files"))}}
+	<p>
+		{{=T("The XSD defines the possible and required elements your text can have.")}}<br />
+		<input accept="text/xml" text="Upload XSD" type="file">
+	</p>
+	<p>
+		{{=H4("Optional: XML")}}
+		{{=T("The XML is used for previewing. If you want to test your XSL, please upload a XML that conforms with the XSD.")}}<br />
+		<input accept="text/xml" text="Upload XML" type="file">
+	</p>
+	
+	{{=H3(T("Step 2: Write your text"))}}
+		{{=T("Write your text in the editor below. XML elements can be added from the list on the right hand side.")}}<br />
+		<div id="xsltool_editarea">
+
+			<div class="xsltool_editarea_input_l">
+				<div id="xsltool_outtype">
+						{{=T("XSL Output type:")}}
+						<select>
+							<option>{{=T("Text")}}</option>
+							<option>{{=T("HTML")}}</option>
+							<option>{{=T("XML")}}</option>
+							<option>{{=T("Placeholder")}}</option>																		
+						</select>
+				</div>				
+				
+				<div class="tabs">
+					<span class="tab_here">
+						<a href="/eden/xsltool/">{{=T("Text editor")}}</a>
+					</span>
+					<span class="tab_other">
+						<a href="/eden/xsltool/">{{=T("Direct XSL editor")}}</a>
+					</span>
+				</div>
+				<textarea rows="20" id="xsltool_txt" name="textinput">Headline: <alert.info.healine />
+Message is effective <alert.info.effective />
+[...]
+				</textarea>
+			</div>
+			<div class="xsltool_editarea_input_r">
+				<div id="treepanel" class=" x-panel x-tree">
+					<div id="ext-gen17" class="x-panel-header x-unselectable" style="-moz-user-select: none;">
+						<div id="ext-gen20" class="x-tool x-tool-toggle">&nbsp;</div>
+						<span id="ext-gen22" class="x-panel-header-text">{{=T("Available XML Elements. Click to add.")}}</span>
+					</div>
+					<div id="ext-gen18" class="x-panel-bwrap">
+						<div id="ext-gen19" class="x-panel-body" style="overflow: auto;">
+							<ul id="ext-gen21" class="x-tree-root-ct x-tree-no-lines">
+								<div class="x-tree-root-node">
+									<li class="x-tree-node">
+										<div id="extdd-1" class="x-tree-node-el x-unselectable x-tree-node-leaf" unselectable="on" ext:tree-node-id="xnode-26">
+											<span class="x-tree-node-indent"></span>
+											<img class="x-tree-ec-icon x-tree-elbow-minus" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<img id="extdd-2" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<a class="x-tree-node-anchor" tabindex="1" href="" hidefocus="on">
+												<span id="extdd-3" unselectable="on">Example Tag</span>
+											</a>
+										</div>
+										<ul class="x-tree-node-ct" style="">
+											<li class="x-tree-node">
+												<div id="extdd-4" class="x-tree-node-el x-unselectable" unselectable="on" ext:tree-node-id="xnode-28">
+												<span class="x-tree-node-indent">
+													<img class="x-tree-elbow-line" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												</span>
+												<img class="x-tree-ec-icon x-tree-elbow-end" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												<img id="extdd-5" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												<span id="extdd-6" unselectable="on">String/Text</span>
+												</div>
+												<ul class="x-tree-node-ct" style="display:none;"></ul>
+											</li>
+											
+											<li class="x-tree-node">
+												<div id="extdd-4" class="x-tree-node-el x-unselectable" unselectable="on" ext:tree-node-id="xnode-28">
+												<span class="x-tree-node-indent">
+													<img class="x-tree-elbow-line" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												</span>
+													<img class="x-tree-ec-icon x-tree-elbow-end" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+													<img id="extdd-5" class="x-tree-node-icon gx-tree-baselayer-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+													<span id="extdd-6" unselectable="on">Max. 2 times per file</span>
+												</div>
+												<ul class="x-tree-node-ct" style="display:none;"></ul>
+											</li>											
+											
+										</ul>
+									</li>
+									
+									<li class="x-tree-node">
+										<div id="extdd-1" class="x-tree-node-el x-unselectable x-tree-node-leaf" unselectable="on" ext:tree-node-id="xnode-26">
+											<span class="x-tree-node-indent"></span>
+											<img class="x-tree-ec-icon x-tree-elbow-minus" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<img id="extdd-2" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<a class="x-tree-node-anchor" tabindex="1" href="" hidefocus="on">
+												<span id="extdd-3" unselectable="on">Another Tag</span>
+											</a>
+										</div>
+										
+										<ul class="x-tree-node-ct" style="">
+											<li class="x-tree-node">
+												<div id="extdd-4" class="x-tree-node-el x-unselectable" unselectable="on" ext:tree-node-id="xnode-28">
+												<span class="x-tree-node-indent">
+													<img class="x-tree-elbow-line" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												</span>
+												<img class="x-tree-ec-icon x-tree-elbow-end" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												<img id="extdd-5" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												<span id="extdd-6" unselectable="on">Integer/Number</span>
+												</div>
+												<ul class="x-tree-node-ct" style="display:none;"></ul>
+											</li>
+											
+											<li class="x-tree-node">
+												<div id="extdd-4" class="x-tree-node-el x-unselectable" unselectable="on" ext:tree-node-id="xnode-28">
+												<span class="x-tree-node-indent">
+													<img class="x-tree-elbow-line" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+												</span>
+													<img class="x-tree-ec-icon x-tree-elbow-end" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+													<img id="extdd-5" class="x-tree-node-icon gx-tree-baselayer-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+													<span id="extdd-6" unselectable="on">Min. 1 time per file</span>
+												</div>
+												<ul class="x-tree-node-ct" style="display:none;"></ul>
+											</li>												
+										</ul>
+										<li class="x-tree-node">
+											<div id="extdd-7" class="x-tree-node-el x-unselectable x-tree-node-collapsed" unselectable="on" ext:tree-node-id="xnode-27">
+											<span class="x-tree-node-indent"></span>
+											<img class="x-tree-ec-icon x-tree-elbow-end-plus" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<img id="extdd-8" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<a class="x-tree-node-anchor" tabindex="1" href="" hidefocus="on">
+											<span id="extdd-9" unselectable="on">A segment with more tags</span>
+											</a>
+											</div>
+									</li>
+									
+								</div>
+							</ul>
+						</div>								
+					</div>	
+				</div>
+				<div id="debugpanel" class=" x-panel x-tree">
+					<div id="ext-gen17" class="x-panel-header x-unselectable" style="-moz-user-select: none;">
+						<div id="ext-gen20" class="x-tool x-tool-toggle">&nbsp;</div>
+						<span id="ext-gen22" class="x-panel-header-text">{{=T("Errors")}}</span>
+					</div>
+					<div id="ext-gen18" class="x-panel-bwrap">
+						<div id="ext-gen19" class="x-panel-body" style="overflow: auto;">
+							<ul id="ext-gen21" class="x-tree-root-ct x-tree-no-lines">
+								<div class="x-tree-root-node">
+									<li class="x-tree-node">
+										<div id="extdd-1" class="x-tree-node-el x-unselectable" unselectable="on" ext:tree-node-id="xnode-26">
+											<span class="x-tree-node-indent"></span>
+											<img id="extdd-2" class="x-tree-node-icon" unselectable="on" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+											<a class="x-tree-node-anchor" tabindex="1" href="" hidefocus="on">
+												<span id="extdd-3" class="xsltool_error" unselectable="on">An error goes here</span>
+											</a>
+										</div>
+									</li>
+								</div>		
+							</ul>
+						</div>								
+					</div>	
+				</div>				
+			</div>			
+		</div>			
+	
+		<div id="xsltool_actionarea">
+			{{=H3(T("Step 3: Test or download XSL"))}}
+				{{=T("Now you can test and download your XSL. For testing please prepare a XML that you want to transform")}}<br />
+			<br />
+			<p>
+				<a class="action-btn" onclick="alert('Now refresh Preview below'); return true" href="">{{=T("Refresh preview")}}</a>
+				<a class="action-btn" onclick="alert('Start download of xsl'); return true" href="">{{=T("Save XSL")}}</a>
+			</p>
+			{{=H4("Preview")}}
+			<div>
+				<textarea style="width: 100%" rows="6" readonly>Headline: Floods in XYZ
+Message is effective 2011-12-31 11:11
+[...]</textarea>
+			</div>
+		</div>
+	
+	
